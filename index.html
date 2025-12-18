@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم ملكي خاص 👑</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        body { background: #00122e; color: white; font-family: 'Cairo', sans-serif; margin: 0; text-align: center; overflow-x: hidden; }
+        #login { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #00122e; z-index: 100; position: fixed; width: 100%; top: 0; }
+        input { padding: 15px; border-radius: 30px; border: 2px solid #FEBE10; background: none; color: white; text-align: center; font-size: 20px; width: 250px; outline: none; box-shadow: 0 0 10px #FEBE10; }
+        button { background: #FEBE10; color: #00122e; border: none; padding: 12px 40px; border-radius: 30px; font-weight: bold; margin-top: 20px; cursor: pointer; font-size: 18px; }
+        #content { display: none; padding-top: 20px; }
+        .section { padding: 40px 20px; border-bottom: 1px solid rgba(254, 190, 16, 0.2); animation: fadeInUp 1.5s; }
+        img { width: 90%; max-width: 450px; border-radius: 20px; border: 3px solid #FEBE10; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin: 20px 0; }
+        h1 { color: #FEBE10; font-size: 32px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+        p { font-size: 20px; line-height: 1.8; color: #f0f0f0; max-width: 600px; margin: 0 auto; }
+        .highlight { color: #FEBE10; font-weight: bold; font-size: 24px; }
+        .heart { font-size: 50px; color: #e74c3c; animation: beat 1s infinite; margin: 20px; }
+        @keyframes beat { 0% {transform: scale(1);} 50% {transform: scale(1.2);} 100% {transform: scale(1);} }
+        @keyframes fadeInUp { from {opacity: 0; transform: translateY(30px);} to {opacity: 1; transform: translateY(0);} }
+    </style>
+</head>
+<body>
+
+    <div id="login">
+        <h1 style="font-size: 40px;">Hala Madrid 👑</h1>
+        <p style="margin-bottom: 20px;">ادخل التاريخ السرّي لفتح عالمنا..</p>
+        <input type="password" id="pass" placeholder="-- / --">
+        <button onclick="openWorld()">دخول الريمونتادا</button>
+    </div>
+
+    <div id="content">
+        <div class="heart">❤️</div>
+        <h1>أهلاً بك في مملكتك يا ملكي 👑</h1>
+        
+        <div class="section">
+            <p>بيقولوا إن <span class="highlight">ريال مدريد</span> مبيخسرش نهائيات..</p>
+            <p>وأنا بقول إن قلبي كسب أهم نهائي لما دخلت حياتي.</p>
+            <img src="https://wallpapers.com/images/featured/cristiano-ronaldo-real-madrid-y8v923k7q2q66h2g.jpg">
+        </div>
+
+        <div class="section">
+            <h1>رقم (1) دايماً 🐐</h1>
+            <p>زي ما رونالدو هو الرقم 1 في الكورة.. أنت الرقم 1 في كل تفكيري.</p>
+            <p>بشوف فيك نفس الهيبة، نفس القوة، ونفس الضحكة اللي بتخطفني.</p>
+            <img src="https://i.pinimg.com/originals/8a/0a/61/8a0a6136a53702a647087612c6f37965.jpg">
+        </div>
+
+        <div class="section">
+            <h1>أجمل ريمونتادا: 1 / 10 🗓️</h1>
+            <p>في التاريخ ده، الماتش اتغير تماماً.. سجلت في قلبي هدف ملوش حل.</p>
+            <p>من اليوم ده بقيت أنت "البطولة" اللي بحارب عشان أحافظ عليها.</p>
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80">
+        </div>
+
+        <div class="section">
+            <h1>سيد أوروبا.. وسيد قلبي 🏟️</h1>
+            <p>لو البرنابيو بيشيل 80 ألف مشجع، قلبي مش شايل غيرك أنت.</p>
+            <p>حتى في اللحظات اللي بتعب فيها (زي وقعة امبارح 😂)، بفتكر إنك "أماني" فبقوم أقوى.</p>
+            <img src="https://assets.goal.com/v3/assets/bltba726353c516f799/blt36500742d4a27771/629472e96781223930e38038/Real_Madrid_Champions_League_final_celebrations.jpg">
+        </div>
+
+        <div class="section" style="border: none; margin-bottom: 100px;">
+            <h1 class="highlight">كلمة أخيرة..</h1>
+            <p>مدريد بتكسب الـ 15، وأنا كسبت الدنيا كلها بوجودك.</p>
+            <p>هفضل أشجعك، وأحبك، وأكون "المدريدية" اللي بتعشقك لآخر العمر.</p>
+            <div class="heart">❤️👑🤍</div>
+            <p style="font-style: italic;">دائماً وأبداً.. هلا مدريد وهلا بيك.</p>
+        </div>
+    </div>
+
+    <script>
+        function openWorld() {
+            var p = document.getElementById("pass").value;
+            if(p == "110" || p == "1/10") {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                window.scrollTo(0,0);
+            } else {
+                alert("التاريخ غلط! ركز يا مدريدي 😉");
+            }
+        }
+    </script>
+</body>
+              </html>
