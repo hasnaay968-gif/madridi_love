@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مملكة الملكي الخاصة 👑</title>
+    <title>مملكة الملكي 👑</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; background: #00122e; color: white; font-family: 'Cairo', sans-serif; overflow: hidden; }
-        .slide { display: none; height: 100%; width: 100%; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; box-sizing: border-box; animation: fadeIn 0.8s; }
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+        body, html { margin: 0; padding: 0; height: 100%; background: radial-gradient(circle, #001e4e 0%, #000b1a 100%); color: white; font-family: 'Cairo', sans-serif; overflow: hidden; }
+        .slide { display: none; height: 100%; width: 100%; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; box-sizing: border-box; animation: slideIn 0.5s ease-out; }
         .active { display: flex; }
-        input { padding: 15px; border-radius: 25px; border: 2px solid #FEBE10; background: none; color: white; text-align: center; font-size: 18px; outline: none; margin: 20px 0; }
-        button { background: #FEBE10; color: #00122e; border: none; padding: 12px 35px; border-radius: 25px; font-weight: bold; cursor: pointer; font-size: 18px; margin-top: 10px; }
-        img { width: 85%; max-width: 350px; border-radius: 15px; border: 3px solid #FEBE10; margin: 15px 0; box-shadow: 0 5px 25px rgba(0,0,0,0.6); }
-        h1 { color: #FEBE10; font-size: 22px; margin: 10px 0; }
-        p { font-size: 17px; line-height: 1.5; max-width: 320px; color: #f0f0f0; }
-        .heart { font-size: 35px; color: red; animation: pulse 1s infinite; }
-        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-        @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.1);} 100% {transform: scale(1);} }
+        input { padding: 15px; border-radius: 30px; border: 2px solid #FEBE10; background: rgba(255,255,255,0.1); color: white; text-align: center; font-size: 18px; outline: none; margin: 20px 0; box-shadow: 0 0 15px #FEBE10; }
+        button { background: linear-gradient(45deg, #FEBE10, #ffdb70); color: #001e4e; border: none; padding: 12px 40px; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 18px; margin-top: 10px; box-shadow: 0 4px 15px rgba(254, 190, 16, 0.4); }
+        img, .video-container { width: 90%; max-width: 350px; border-radius: 20px; border: 4px solid #FEBE10; margin: 15px 0; box-shadow: 0 0 30px rgba(254, 190, 16, 0.5); object-fit: cover; aspect-ratio: 16/9; }
+        iframe { border-radius: 15px; width: 100%; height: 200px; border: none; }
+        h1 { color: #FEBE10; font-size: 24px; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); }
+        p { font-size: 18px; line-height: 1.6; max-width: 320px; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
+        .heart { font-size: 45px; color: #ff4d4d; animation: beat 0.8s infinite; }
+        @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+        @keyframes beat { 0% {transform: scale(1);} 50% {transform: scale(1.2);} 100% {transform: scale(1);} }
     </style>
 </head>
 <body>
 
     <div class="slide active" id="slide-0">
-        <h1 style="font-size: 30px;">Hala Madrid 👑</h1>
+        <h1 style="font-size: 35px;">Hala Madrid 👑</h1>
         <p>ادخل التاريخ السري لفتح عالمنا..</p>
         <input type="password" id="password" placeholder="-- / --">
         <button onclick="checkPassword()">فتح المملكة 🗝️</button>
@@ -30,91 +32,89 @@
     <div class="slide" id="slide-1">
         <div class="heart">❤️</div>
         <h1>مرحباً بك يا قائدي</h1>
-        <p>المكان ده مش مجرد ويب سايت، ده مكان قلبي اللي أنت محتله.</p>
-        <img src="https://static.goal.com/123300/123372.jpg">
-        <button onclick="nextSlide(2)">نبدأ الرحلة؟ ✨</button>
+        <p>المكان ده معمول ليك.. عشان تعرف إنك أهم ريمونتادا في حياتي.</p>
+        <img src="https://images.performgroup.com/di/library/GOAL/81/2/cristiano-ronaldo-real-madrid_1e68t0q1o868v1v8qisbshj7at.jpg?t=-1892850983" alt="CR7">
+        <button onclick="nextSlide(2)">ادخل قلبي.. ✨</button>
     </div>
 
     <div class="slide" id="slide-2">
         <h1>هيبة الدون 👑</h1>
-        <p>بشوف فيك نفس الكبرياء والشموخ اللي عند رونالدو في الملعب.</p>
-        <img src="https://wallpapers.com/images/featured/cristiano-ronaldo-real-madrid-y8v923k7q2q66h2g.jpg">
-        <button onclick="nextSlide(3)">التالي.. ✨</button>
+        <p>بشوف فيك نفس قوة وعظمة رونالدو.. الشخص اللي دايماً بيخطف قلبي.</p>
+        <img src="https://images.performgroup.com/di/library/GOAL/e0/f/cristiano-ronaldo-real-madrid_1v41kndd0shj1m80x78g8f7q8.jpg?t=1364582313" alt="CR7 Legend">
+        <button onclick="nextSlide(3)">اللي بعده.. ✨</button>
     </div>
 
     <div class="slide" id="slide-3">
-        <h1>قلعة البرنابيو 🏟️</h1>
-        <p>زي ما الملعب ده بيشيل أحلام المدريدية، أنت شايل كل أحلامي بين إيديك.</p>
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80">
-        <button onclick="nextSlide(4)">كمل.. 😉</button>
+        <h1>البرنابيو المنور 🏟️</h1>
+        <p>زي ما الملعب ده بيشيل تاريخ مدريد، قلبي شايل كل تفاصيلك.</p>
+        <img src="https://www.realmadrid.com/cs/Satellite?blobcol=urldata&blobheader=image%2Fjpeg&blobkey=id&blobtable=MungoBlobs&blobwhere=1203348162234&ssbinary=true" alt="Stadium">
+        <button onclick="nextSlide(4)">كمل يا بطل.. 😉</button>
     </div>
 
     <div class="slide" id="slide-4">
-        <h1>الريمونتادا المستحيلة 🗓️</h1>
-        <p>في يوم 1 / 10 قلبي عمل ريمونتادا تاريخية ورجع للحياة بوجودك.</p>
-        <img src="https://i.pinimg.com/736x/8a/0a/61/8a0a6136a53702a647087612c6f37965.jpg">
-        <button onclick="nextSlide(5)">لسه بدري.. 🔥</button>
+        <h1>تاريخنا السري 🗓️</h1>
+        <p>1 / 10.. اليوم اللي سجلت فيه أغلى هدف في حياتي وبدأنا فيه حكايتنا.</p>
+        <img src="https://images.performgroup.com/di/library/GOAL/6d/4e/real-madrid-fans_100x7j07r7v6m1b5n5cclg9l4n.jpg?t=-1872322311" alt="Fans">
+        <button onclick="nextSlide(5)">لسه فيه دلع.. 🔥</button>
     </div>
 
     <div class="slide" id="slide-5">
-        <h1>أنت البطلي الحقيقي 🏆</h1>
-        <p>مدريد بتجمع كؤوس، وأنا بجمع لحظاتنا سوا لأنها أغلى من أي ذهب.</p>
-        <img src="https://www.realmadrid.com/cs/Satellite?blobcol=urldata&blobheader=image%2Fjpeg&blobkey=id&blobtable=MungoBlobs&blobwhere=1203348162234&ssbinary=true">
+        <h1>سيد قلبي 🏆</h1>
+        <p>هما بيجمعوا بطولات، وأنا بجمع لحظاتنا سوا لأنها أغلى من الذهب.</p>
+        <img src="https://images.performgroup.com/di/library/GOAL/7b/7c/real-madrid-champions-league-trophy_1b6y8m560y7q119b4n6v98r1h5.jpg?t=-1036236311" alt="Trophy">
         <button onclick="nextSlide(6)">التالي.. ✨</button>
     </div>
 
     <div class="slide" id="slide-6">
-        <h1>سر القوة 💪</h1>
-        <p>قوتك وإصرارك بيفكروني بروح الفانلة البيضاء اللي مبتستسلمش أبداً.</p>
-        <img src="https://assets.goal.com/v3/assets/bltba726353c516f799/blt36500742d4a27771/629472e96781223930e38038/Real_Madrid_Champions_League_final_celebrations.jpg">
-        <button onclick="nextSlide(7)">لسه فيه مفاجآت.. 🎁</button>
+        <h1>القائد الحقيقي 💪</h1>
+        <p>قوتك بتهز قلبي زي ما مدريد بتهز شباك الخصوم في الدقيقة 90.</p>
+        <img src="https://images.performgroup.com/di/library/GOAL/2a/54/sergio-ramos-real-madrid_13h7b5b7b1b511v5k9q8m5p8r5.jpg?t=1243582311" alt="Captain">
+        <button onclick="nextSlide(7)">قربنا.. 🎁</button>
     </div>
 
     <div class="slide" id="slide-7">
-        <h1>احتفال خاص ⚽</h1>
-        <p>كل ضحكة منك هي احتفال في قلبي، زي فرحة هدف في الدقيقة 90.</p>
-        <img src="https://i.pinimg.com/736x/21/8e/3c/218e3c79a4053805825d7b56f8f7000e.jpg">
+        <h1>احتفال الـ "Siuuu" ❤️</h1>
+        <p>ضحكتك هي الاحتفال اللي بيرد فيا الروح وبيفرح قلبي.</p>
+        <img src="https://images.performgroup.com/di/library/GOAL/81/4b/cristiano-ronaldo-real-madrid-celebration_13q7b5b7b1b511v5k9q8m5p8r5.jpg?t=1463582311" alt="Siuuu">
         <button onclick="nextSlide(8)">كمل يا ملكي.. ✨</button>
     </div>
 
     <div class="slide" id="slide-8">
-        <h1>نجمة الشباك ⭐</h1>
-        <p>أنت النجم اللي منور سمائي، والمهاجم اللي سجل في قلبي ومطلعش.</p>
-        <img src="https://static.goal.com/83200/83212.jpg">
-        <button onclick="nextSlide(9)">قربنا.. ❤️</button>
+        <h1>أنت النجم ⭐</h1>
+        <p>أنت النجم اللي منور حياتي، والوحيد اللي مسموح له يحتل قلبي.</p>
+        <img src="https://www.realmadrid.com/cs/Satellite?blobcol=urldata&blobheader=image%2Fjpeg&blobkey=id&blobtable=MungoBlobs&blobwhere=1203348161111&ssbinary=true" alt="Star">
+        <button onclick="nextSlide(9)">صفحة الوفاء.. ❤️</button>
     </div>
 
     <div class="slide" id="slide-9">
-        <h1>الوفاء المدريدي 🤍</h1>
-        <p>أوعدك أكون دايماً جمهورك الوفي اللي بيشجعك في كل حالاتك.</p>
-        <img src="https://e0.365dm.com/22/05/1600x900/skysports-real-madrid-celebrations_5762291.jpg">
-        <button onclick="nextSlide(10)">الصفحة قبل الأخيرة.. 💖</button>
+        <h1>جمهورك الوفي ⚪</h1>
+        <p>أنا جمهورك اللي هيشجعك للأبد، في الفوز وفي الخسارة دايماً جنبك.</p>
+        <img src="https://images.performgroup.com/di/library/GOAL/9a/54/real-madrid-celebration_1v41kndd0shj1m80x78g8f7q8.jpg?t=1564582313" alt="Team">
+        <button onclick="nextSlide(10)">قبل الأخير.. 💖</button>
     </div>
 
     <div class="slide" id="slide-10">
-        <h1>أنت الـ 15 🏆</h1>
-        <p>هما فرحانين بالـ 15، وأنا فرحتي بيك أنت ملهش عدد ولا حدود.</p>
-        <div class="heart">❤️👑🤍</div>
-        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80">
+        <h1>فوزنا الأبدي 🏆</h1>
+        <p>فوز مدريد لحظة.. وحبك عمر كامل. أنت الـ 15 والـ 16 وكل بطولاتي يا ملكي.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/S_8qU3CIsX0?autoplay=0" allowfullscreen></iframe>
+        </div>
         <button onclick="nextSlide(11)">الخاتمة.. ✨</button>
     </div>
 
     <div class="slide" id="slide-11">
         <h1>إلى الأبد.. ❤️</h1>
-        <p>بحبك يا مدريدي، وهلا مدريد لآخر العمر بوجودك جنبي.</p>
+        <p>بحبك يا مدريدي، وهلا مدريد لآخر العمر بوجودك في دنيتي.</p>
         <div class="heart">❤️👑🤍</div>
-        <p style="font-style: italic;">"أجمل انتصاراتي هو أنت"</p>
+        <p style="font-style: italic; color: #FEBE10;">"أنت أعظم انتصاراتي"</p>
         <button onclick="location.reload()">إعادة الرحلة؟ 🔄</button>
     </div>
 
     <script>
         function checkPassword() {
             const pass = document.getElementById('password').value;
-            if (pass === '110' || pass === '1/10') {
-                nextSlide(1);
-            } else {
-                alert('التاريخ غلط! ركز يا ملكي 😉');
-            }
+            if (pass === '110' || pass === '1/10') { nextSlide(1); } 
+            else { alert('التاريخ غلط! ركز يا ملكي 😉'); }
         }
         function nextSlide(n) {
             const slides = document.querySelectorAll('.slide');
@@ -124,4 +124,5 @@
     </script>
 </body>
 </html>
+
 
