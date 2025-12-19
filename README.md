@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى ملكي الخاص 👑</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+        body, html { margin: 0; padding: 0; height: 100%; background: radial-gradient(circle, #001e4e 0%, #000b1a 100%); color: white; font-family: 'Cairo', sans-serif; overflow: hidden; }
+        .slide { display: none; height: 100%; width: 100%; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; box-sizing: border-box; animation: fadeIn 0.8s ease; }
+        .active { display: flex; }
+        input { padding: 12px; border-radius: 25px; border: 2px solid #FEBE10; background: rgba(255,255,255,0.1); color: white; text-align: center; outline: none; margin: 20px 0; font-size: 16px; box-shadow: 0 0 10px rgba(254, 190, 16, 0.3); }
+        button { background: linear-gradient(45deg, #FEBE10, #ffdb70); color: #001e4e; border: none; padding: 12px 35px; border-radius: 25px; font-weight: bold; cursor: pointer; font-size: 16px; margin-top: 10px; box-shadow: 0 4px 15px rgba(254, 190, 16, 0.4); }
+        img, .video-box { width: 90%; max-width: 320px; border-radius: 15px; border: 3px solid #FEBE10; margin: 15px 0; box-shadow: 0 0 25px rgba(254, 190, 16, 0.5); object-fit: cover; }
+        iframe { width: 100%; height: 200px; border-radius: 12px; border: none; }
+        h1 { color: #FEBE10; font-size: 24px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin: 10px 0; }
+        p { font-size: 17px; line-height: 1.6; max-width: 320px; color: #f0f0f0; margin: 5px 0; }
+        .heart { font-size: 35px; color: #ff4d4d; animation: beat 1s infinite; }
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+        @keyframes beat { 0% {transform: scale(1);} 50% {transform: scale(1.1);} 100% {transform: scale(1);} }
+    </style>
+</head>
+<body>
+
+    <div class="slide active" id="slide-0">
+        <h1>Hala Madrid 👑</h1>
+        <p>عالم "المدريدي" الخاص.. اكتب تاريخك المفضل</p>
+        <input type="password" id="password" placeholder="-- / --">
+        <button onclick="checkPassword()">دخول 🗝️</button>
+    </div>
+
+    <div class="slide" id="slide-1">
+        <div class="heart">🤍</div>
+        <h1>أهلاً يا ملك قلبي</h1>
+        <p>المكان ده رسالة تقدير صامتة.. لشخص بشوفه أجمل صدفة دخلت حياتي.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/640px-Cristiano_Ronaldo_2018.jpg">
+        <button onclick="nextSlide(2)">ابدأ الحكاية ✨</button>
+    </div>
+
+    <div class="slide" id="slide-2">
+        <h1>هيبة ملوك 👑</h1>
+        <p>بشوف فيك نفس كبرياء مدريد وقوة الدون.. حضورك لوحده كفاية يطمن قلبي.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Cristiano_Ronaldo_Real_Madrid_2015.jpg/640px-Cristiano_Ronaldo_Real_Madrid_2015.jpg">
+        <button onclick="nextSlide(3)">التالي.. ✨</button>
+    </div>
+
+    <div class="slide" id="slide-3">
+        <h1>البرنابيو الخاص بيا 🏟️</h1>
+        <p>زي ما الملعب ده بينور بالبطولات، قلبي بينور بمجرد ما المح طيفك.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Estadio_Santiago_Bernab%C3%A9u_-_Panorama.jpg/1280px-Estadio_Santiago_Bernab%C3%A9u_-_Panorama.jpg">
+        <button onclick="nextSlide(4)">كمل.. ✨</button>
+    </div>
+
+    <div class="slide" id="slide-4">
+        <h1>1 / 10 🗓️</h1>
+        <p>التاريخ ده شاهد على اليوم اللي بقيت فيه "البطولة" اللي بتمناها من ربنا دايماً.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Cristiano_Ronaldo_Real_Madrid.jpg/640px-Cristiano_Ronaldo_Real_Madrid.jpg">
+        <button onclick="nextSlide(5)">لسه فيه تاني.. 😉</button>
+    </div>
+
+    <div class="slide" id="slide-5">
+        <h1>أنت انتصاري 🏆</h1>
+        <p>مدريد بتكسب الـ 15، وأنا مكسبى في الدنيا هو إني عرفت شخص متميز زيك.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Real_Madrid_celebrating_Champions_League_2018.jpg/640px-Real_Madrid_celebrating_Champions_League_2018.jpg">
+        <button onclick="nextSlide(6)">التالي.. ✨</button>
+    </div>
+
+    <div class="slide" id="slide-6">
+        <h1>روح لا تستسلم ⚪</h1>
+        <p>اتعلمت من مدريد إن الأمل مابيموتش.. وعشان كدة هفضل دايماً معجبة بيك.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Cristiano_Ronaldo_Portugal_2018.jpg/640px-Cristiano_Ronaldo_Portugal_2018.jpg">
+        <button onclick="nextSlide(7)">قربنا.. ✨</button>
+    </div>
+
+    <div class="slide" id="slide-7">
+        <h1>ضحكتك هي الـ "Siuuu" ❤️</h1>
+        <p>ضحكتك هي هدفي الغالي في الدقيقة 90.. هي اللي بترد الروح في عز التعب.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Cristiano_Ronaldo_2012.jpg/640px-Cristiano_Ronaldo_2012.jpg">
+        <button onclick="nextSlide(8)">كمل يا ملكي.. ✨</button>
+    </div>
+
+    <div class="slide" id="slide-8">
+        <h1>نجمي البعيد ⭐</h1>
+        <p>أنت النجم اللي في السما.. عيوني دايماً شيفاك في أحسن صورة.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Cristiano_Ronaldo_appearing_for_Portugal_in_2018.jpg/640px-Cristiano_Ronaldo_appearing_for_Portugal_in_2018.jpg">
+        <button onclick="nextSlide(9)">اللي قبل الأخيرة.. ❤️</button>
+    </div>
+
+    <div class="slide" id="slide-9">
+        <h1>وفاء مدريدي 🤍</h1>
+        <p>زي وفاء الجمهور لقميص مدريد، هيفضل تقديري وإعجابي بيك للأبد.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Real_Madrid_v_Juventus%2C_11_April_2018.jpg/640px-Real_Madrid_v_Juventus%2C_11_April_2018.jpg">
+        <button onclick="nextSlide(10)">مسك الختام 🎬</button>
+    </div>
+
+    <div class="slide" id="slide-10">
+        <h1>فوزنا الأبدي 🏆</h1>
+        <p>فوز مدريد لحظة.. بس وجودك في دنيتي عمر كامل.</p>
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/S_8qU3CIsX0?autoplay=0" allowfullscreen></iframe>
+        </div>
+        <p style="font-style: italic; color: #FEBE10; font-weight: bold; margin-top: 15px;">
+            "أنت الريمونتادا اللي نورت قلبي.. هلا مدريد دائماً وأبداً بوجودك يا ملكي"
+        </p>
+        <button onclick="location.reload()">إعادة الرحلة؟ 🔄</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const pass = document.getElementById('password').value;
+            if (pass === '110' || pass === '1/10') { nextSlide(1); } 
+            else { alert('التاريخ غلط! ركز يا مدريدي 😉'); }
+        }
+        function nextSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(s => s.classList.remove('active'));
+            document.getElementById('slide-' + n).classList.add('active');
+        }
+    </script>
+</body>
+</html>
